@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment-with-locales.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title class ="headerText">Day Planner</title>
+    <div id ="headerBox">
+        <h1 class="headerText">Day Planner</h1>
+        <div id ="description">A simple Day Calendar to help you keep track of your schedule, enjoy!</div>
+        <div id="dateBox"></div>
+        <br>
+        <hr>
+    </div>
+</div>
+</head>
+<body>
+    <br>
+    <div class="row plannerRow">
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-10">
+            <div class="row timerow row9 border">
+                <div class="col-md-2 timebox">9 AM</div>
+                <div id = "9AMBox" class="col-md-8 contentbox">
+                    <input id="input9" class="input">
+                </div>
+                <div id ="savebox9" class="col-md-2 savebox">Save</div>
+            </div>
+            <div class="row timerow row10 border">
+                <div class="col-md-2 timebox">10 AM</div>
+                <div id ="10AMBox" class="col-md-8 contentbox">
+                        <input id="input10" class="input">
+                </div>
+                <div id ="savebox10" class="col-md-2 savebox">Save</div>
+            </div>
+            <div class="row timerow row11 border">
+                <div class="col-md-2 timebox">11 AM</div>
+                <div id ="11AMBox" class="col-md-8 contentbox">
+                    <input id="input11" class="input">
+                </div>
+                <div id ="savebox11" class="col-md-2 savebox">Save</div>
+            </div>
+            <div class="row timerow row12 border">
+                <div class="col-md-2 timebox">12 PM</div>
+                <div id ="12PMBox" class="col-md-8 contentbox">
+                    <input id="input12" class="input">
+                </div>
+                <div id ="savebox12" class="col-md-2 savebox">Save</div>
+            </div>
+            <div class="row timerow row1 border">
+                <div class="col-md-2 timebox">1 PM</div>
+                <div id ="1PMBox" class="col-md-8 contentbox">
+                    <input id="input13" class="input">
+                </div>
+                <div id ="savebox13"class="col-md-2 savebox">Save</div>
+            </div>
+            <div class="row timerow row2 border">
+                <div class="col-md-2 timebox">2 PM</div>
+                <div id ="2PMBox" class="col-md-8 contentbox">
+                    <input id="input14"class="input">
+                </div>
+                <div id ="savebox14" class="col-md-2 savebox">Save</div>
+            </div>
+            <div class="row timerow row3 border">
+                <div class="col-md-2 timebox">3 PM</div>
+                <div id ="3PMBox" class="col-md-8 contentbox">
+                    <input id="input15" class="input">
+                </div>
+                <div id ="savebox15" class="col-md-2 savebox">Save</div>
+            </div>
+            <div class="row timerow row4 border">
+                <div class="col-md-2 timebox">4 PM</div>
+                <div id ="4PMBox" class="col-md-8 contentbox">
+                    <input id="input16" class="input">
+                </div>
+                <div id ="savebox16" class="col-md-2 savebox">Save</div>
+            </div>
+            <div class="row timerow row4 border">
+                <div class="col-md-2 timebox">5 PM</div>
+                <div id ="5PMBox" class="col-md-8 contentbox">
+                </div>
+                <div id="saveboxend" class="col-md-2 savebox"></div>
+            </div>
+        </div>
+        <div class="col-md-1">
+        </div>
+    </div>
+
+
+    <style>
+    
+    hr {
+        border-top: 5px solid rgb(29, 29, 29);
+        margin: 0;
+    }
+   #headerBox {
+    text-align: center;
+   }
+   .headerText{
+       display: inline-block;
+   }
+   .timerow {
+        font-size: 2em;
+   }
+
+   .timebox {
+       border-top: 2px solid black;
+       background-color: yellow;
+   }
+   .contentbox {
+       border: 1px solid grey;
+       background-color: green;
+       width: 100%;
+   }
+   .currentcontentbox{
+       background-color: purple;
+   }
+   .pastcontentbox {
+       background-color: grey;
+   }
+   .savebox{
+       border-top-right-radius:  10px;
+       border-bottom-right-radius: 10px;
+       border: 1px solid grey;
+       background-color: blue;
+   }
+   .input{
+       background: none;
+       width: 100%;
+       border: none;
+   }
+.savebox:hover {
+    background-color: green;
+}
+.savebox:active{
+    background-color: rgb(102, 37, 102);
+}
+    
+    </style>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
