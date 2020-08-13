@@ -16,7 +16,7 @@ later recall.
 If any revisions need to be made, simply click the text field, make your changes and click
 save again.
 
-![alt text](http://url/to/img.png)
+![alt text](https://github.com/Bensonm3/Day-Planner/blob/master/Screen%20Shot%202020-08-12%20at%205.38.24%20PM.png)
 
 Deployed URL:
 https://bensonm3.github.io/Day-Planner/
