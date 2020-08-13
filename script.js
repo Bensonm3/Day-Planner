@@ -49,13 +49,12 @@ hoursArray.forEach(function(element){
     // Save tasks to Local Storage
     hoursArray.forEach(function(hour) {
         $('#savebox'+hour).on('click', function(){
-                var storedTask = {
-                Time: hour+" AM",
-                Task: $("#input"+hour).val().trim(),
-                    } 
-                    console.log(storedTask)
-                localStorage.setItem(hour+" Task", JSON.stringify(storedTask));
-                    })
+            var storedTask = {
+            Time: hour+" AM",
+            Task: $("#input"+hour).val().trim(),
+            } 
+        localStorage.setItem(hour+" Task", JSON.stringify(storedTask));
         })
+    })
 checktime();
 
