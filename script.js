@@ -26,9 +26,16 @@ hoursArray.forEach(function(element){
 });
 // Generates HTML for planner rows
 hoursArray.forEach(function(hour) {
+    if(hour >12){
+        time = hour-12+" PM"
+    } else if(hour == 12){
+    time = hour+" PM"
+    } else{
+        time = hour+ " AM"
+    }
     $("#PlannerBox").append(
     `<div class="row timerow row`+hour+`">
-    <div class="col-md-2 timebox">`+hour+` AM</div>
+    <div class="col-md-2 timebox">`+time+`</div>
     <div id = "Box`+hour+`" class="col-md-8 contentbox">
         <input id="input`+hour+`" class="input">
     </div>
