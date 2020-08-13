@@ -1,13 +1,5 @@
 const dateBox = document.getElementById("dateBox");
-const Box9 = document.getElementById("9AMBox");
-const Box10 = document.getElementById("10AMBox");
-const Box11 = document.getElementById("11AMBox");
-const Box12 = document.getElementById("12PMBox");
-const Box13 = document.getElementById("1PMBox");
-const Box14 = document.getElementById("2PMBox");
-const Box15 = document.getElementById("3PMBox");
-const Box16 = document.getElementById("4PMBox");
-const Box17 = document.getElementById("5PMBox");
+const plannerBox = document.getElementById("PlannerBox");
 let retrievedTask;
 let storedTask;
 let Task;
@@ -33,7 +25,19 @@ hoursArray.forEach(function(element){
         }
     })
 });
-// This function checks the time and changes the colors of the text inputs based on the time of day
+// Generates HTML for planner rows
+hoursArray.forEach(function(hour) {
+    $("#PlannerBox").append(
+    `<div class="row timerow row`+hour+`">
+    <div class="col-md-2 timebox">`+hour+` AM</div>
+    <div id = "Box`+hour+`" class="col-md-8 contentbox">
+        <input id="input`+hour+`" class="input">
+    </div>
+    <div id ="savebox`+hour+`" class="col-md-2 savebox">Save</div>
+</div>`
+)
+})
+// This function checks the time and changes the div class based on the time of day, which changes the color of the box
    function checktime() {
        hoursArray.forEach(function(element){
            if (currentHour > element) {
@@ -49,8 +53,9 @@ hoursArray.forEach(function(element){
     // Save tasks to Local Storage
     hoursArray.forEach(function(hour) {
         $('#savebox'+hour).on('click', function(){
+            console.log("click!")
             var storedTask = {
-            Time: hour+" AM",
+            Time: hour,
             Task: $("#input"+hour).val().trim(),
             } 
         localStorage.setItem(hour+" Task", JSON.stringify(storedTask));
