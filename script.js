@@ -23,40 +23,39 @@ var hoursArray = [9, 10, 11, 12, 13, 14, 15, 16, 17]
 
 // On load, this function retrieves any saved tasks
 hoursArray.forEach(function(element){
-$(document).ready(function() {
-    var retrievedTask = JSON.parse(localStorage.getItem(element +" Task"))
-    if(retrievedTask ==null) {
-        $("#input"+element).val(null);
-    }
-    else {
-    $("#input"+element).val(retrievedTask["Task"]);
-    }
-    })});
-
+    $(document).ready(function() {
+        var retrievedTask = JSON.parse(localStorage.getItem(element +" Task"))
+        if(retrievedTask ==null) {
+            $("#input"+element).val(null);
+        }
+        else {
+            $("#input"+element).val(retrievedTask["Task"]);
+        }
+    })
+});
 // This function checks the time and changes the colors of the text inputs based on the time of day
    function checktime() {
        hoursArray.forEach(function(element){
-        if (currentHour > element) {
-            $(eval("Box" + element)).addClass("pastcontentbox").removeClass("contentbox");
-        } 
-        else if (currentHour === element) {
-            $(eval("Box" + element)).addClass("currentcontentbox").removeClass("contentbox");
-            $(document).ready(function(){
-            }
-        )}    
+           if (currentHour > element) {
+               $(eval("Box" + element)).addClass("pastcontentbox").removeClass("contentbox");
+            } 
+            else if (currentHour === element) {
+                $(eval("Box" + element)).addClass("currentcontentbox").removeClass("contentbox");
+                $(document).ready(function(){
+                }
+            )}    
         }
     )};
-
     // Save tasks to Local Storage
-    hoursArray.forEach(function(i) {
-    $('#savebox'+i).on('click', function(){
-            var storedTask = {
-            Time: i+" AM",
-            Task: $("#input"+i).val().trim(),
-                 } 
-                 console.log(storedTask)
-            localStorage.setItem(i+" Task", JSON.stringify(storedTask));
-                })
-    })
+    hoursArray.forEach(function(hour) {
+        $('#savebox'+hour).on('click', function(){
+                var storedTask = {
+                Time: hour+" AM",
+                Task: $("#input"+hour).val().trim(),
+                    } 
+                    console.log(storedTask)
+                localStorage.setItem(hour+" Task", JSON.stringify(storedTask));
+                    })
+        })
 checktime();
 
