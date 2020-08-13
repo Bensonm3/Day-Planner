@@ -7,8 +7,7 @@ let Time;
 // Retrieve and display current date
 var headerdate = moment().format(" dddd,  MMMM Do");
 dateBox.innerHTML = "<p> Current Date: " + headerdate +"</p>";
-// functions to change the content box colors based on the current time. Change var currenthour to a number between 9 and 17 to see 
-// how it acts at different times of day
+// functions to change the content box colors based on the current time. Change var currenthour to a number between 9 and 17 to see how it acts at different times of day
 var date = new Date();
 var currentHour = date.getHours();
 var hoursArray = [9, 10, 11, 12, 13, 14, 15, 16, 17]
