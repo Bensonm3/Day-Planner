@@ -1,4 +1,3 @@
-# hw5
 Day Planner
 
 Purpose:
