@@ -15,3 +15,8 @@ The user then clicks the adjacent "save" button to save the content to local sto
 later recall.
 If any revisions need to be made, simply click the text field, make your changes and click
 save again.
+
+![alt text](http://url/to/img.png)
+
+Deployed URL:
+https://bensonm3.github.io/Day-Planner/
