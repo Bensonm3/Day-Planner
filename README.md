@@ -1,6 +1,7 @@
 Day Planner
 
 Purpose:
+<br/>
 To allow the user to plan out their day in a concise and organized location
 
 Features:
