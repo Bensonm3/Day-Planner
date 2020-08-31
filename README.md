@@ -16,11 +16,11 @@ If any revisions need to be made, simply click the text field, make your changes
 save again.
 
 Technologies Used:
-    jQuery
-    Javascript
-    Moment.js
-    HTML
-    CSS
+     jQuery
+     Javascript
+     Moment.js
+     HTML
+      CSS
 
 ![alt text](https://github.com/Bensonm3/Day-Planner/blob/master/Screen%20Shot%202020-08-12%20at%205.38.24%20PM.png)
 
