@@ -24,7 +24,7 @@ hoursArray.forEach(function(element){
         }
     })
 });
-// Generates HTML for planner rows
+// Generates HTML for planner rows, with properly formatted time
 hoursArray.forEach(function(hour) {
     if(hour >12){
         time = hour-12+" PM"
